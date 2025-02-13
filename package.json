@@ -1,0 +1,31 @@
+{
+  "name": "toposel_guru_nodejs_assignment",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guruakaashjn/toposel_guru_assignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guruakaashjn/toposel_guru_assignment/issues"
+  },
+  "homepage": "https://github.com/guruakaashjn/toposel_guru_assignment#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
