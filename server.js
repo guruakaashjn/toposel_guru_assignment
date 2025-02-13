@@ -10,9 +10,16 @@ const app = express();
 const serverPort = process.env.PORT;
 
 app.use(express.json());
-
 app.use('/api/v1', rootRouter);
 app.use('/api/v1/user', userRoute);
+
+// Global error-handling middleware, which is the final last error handling done to catch express-async-handler errors.
+app.use((err, req, res, next) => {
+    res.status(500).json({
+        "error": "Internal server error",
+        "message": err.message
+    });
+});
 
 const server = async () => {
     try {
