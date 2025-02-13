@@ -33,7 +33,7 @@ npm run start
 
 - Project implementation with proper industry standards.
 - Widely adopted folder structure used.
-- Command level, API leve and DB level validations added to the APIs.
+- Command level, API level and DB level validations are added.
 - Clean, optimized and intuitive code.
 
 **Tech Stack used**
