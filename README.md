@@ -40,17 +40,17 @@ npm run start
 
 - NodeJS
 - ExpressJS
-- MongoDB
+- MongoDB Database
 - VanillaJS
 
 **NPM libraries used**
 
-- "bcrypt": "^5.1.1",
-- "dotenv": "^16.4.7",
-- "express": "^4.21.2",
-- "express-async-handler": "^1.2.0",
-- "joi": "^17.13.3",
-- "jsonwebtoken": "^9.0.2",
-- "mongodb": "^6.13.0",
-- "mongoose": "^8.10.0",
-- "nodemon": "^3.1.9"
+- bcrypt: "^5.1.1",
+- dotenv: "^16.4.7",
+- express: "^4.21.2",
+- express-async-handler: "^1.2.0",
+- joi: "^17.13.3",
+- jsonwebtoken: "^9.0.2",
+- mongodb: "^6.13.0",
+- mongoose: "^8.10.0",
+- nodemon: "^3.1.9"
