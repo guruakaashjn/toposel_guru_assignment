@@ -1,7 +1,6 @@
 import asyncHandler from "express-async-handler";
 import bcrypt from "bcrypt";
-import { createNewUser, checkUserExists, generateUserJWTToken } from "../services/userService.js"
-
+import { createNewUser, checkUserExists, generateUserJWTToken, getUserRecords } from "../services/userService.js"
 
 export const registerUser = asyncHandler(async (req, res) => {
     const existingUser = await checkUserExists(req.body);
@@ -26,6 +25,14 @@ export const loginUser = asyncHandler(async (req, res) => {
         return res.status(401).json({ "error": "User Authentication failed", "message": "User does not exists in the db" });
     }
 
-    const jwtToken = await generateUserJWTToken(password, existingUser);
-    res.status(200).json({ token: jwtToken });
-})
+    const { token, error } = await generateUserJWTToken(password, existingUser);
+    if (error) {
+        return res.status(401).json({ "error": "User Authentication failed", "message": error.message });
+    }
+    res.status(200).json({ token: token });
+});
+
+export const getUsers = asyncHandler(async (req, res) => {
+    const users = await getUserRecords(req);
+    res.status(200).json(users);
+});
